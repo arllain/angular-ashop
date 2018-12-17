@@ -20,6 +20,7 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   providers: [
     AuthService,
-    AuthGuardService
+    AuthGuardService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
