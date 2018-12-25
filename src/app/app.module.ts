@@ -21,6 +21,7 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserService } from './user.service';
+import { ProductFormComponent } from './admin/product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { UserService } from './user.service';
     MyOrdersComponent,
     AdminOrdersComponent,
     AdminProductsComponent,
-    LoginComponent
+    LoginComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +56,7 @@ import { UserService } from './user.service';
       { path: 'my/orders', component: MyOrdersComponent, canActivate: [AuthGuardService]  },
 
       { path: 'admin/products', component: AdminProductsComponent, canActivate: [AuthGuardService]  },
+      { path: 'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuardService]  },
       { path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuardService]  }
     ])
   ],
