@@ -16,8 +16,11 @@
     <label for="category">Category</label>
     <select id="category" class="form-control">
       <option value=""></option>
+      <option *ngFor="let c of categories$ | async" [value]="c.$key">
+        {{c.name}}
+      </option>
     </select>
-  </div>
+  </div> 
   <div class="form-group">
     <label for="imageUrl">Image URL</label>
     <input id="imageUrl" type="text" class="form-control">
